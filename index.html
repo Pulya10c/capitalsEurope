@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Europejskie Stolice</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: stretch;
+        min-height: 100vh;
+      }
+      #capitals {
+        margin: 0 0 8px 8px;
+        width: 25%;
+        height: 100%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead,
+      tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      tbody {
+        display: block;
+        height: 95vh; /* Настройте высоту по вашему усмотрению */
+        overflow-y: scroll;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      #map {
+        /* height: 100vh; */
+        width: 75%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="capitals">
+      <table>
+        <thead>
+          <tr>
+            <th>Kraj</th>
+            <th>Stolica</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
