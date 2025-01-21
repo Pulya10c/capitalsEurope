@@ -35,10 +35,17 @@
         width: 100%;
         table-layout: fixed;
       }
-
+      #languageSwitcher {
+        margin: 8px;
+        display: flex;
+        align-items: center;
+      }
+      #languageSwitcher input[type="radio"] {
+        margin: 0 8px;
+      }
       tbody {
         display: block;
-        height: 95vh; /* Настройте высоту по вашему усмотрению */
+        height: 92vh; /* Настройте высоту по вашему усмотрению */
         overflow-y: scroll;
       }
       th,
@@ -58,6 +65,12 @@
   </head>
   <body>
     <div id="capitals">
+      <div id="languageSwitcher">
+        <input type="radio" id="langPl" name="language" checked />
+        <label for="langPl">Polski</label>
+        <input type="radio" id="langRu" name="language" />
+        <label for="langRu">Русский</label>
+      </div>
       <table>
         <thead>
           <tr>
